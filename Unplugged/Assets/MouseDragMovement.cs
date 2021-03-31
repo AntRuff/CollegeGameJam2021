@@ -12,7 +12,7 @@ public class MouseDragMovement : MonoBehaviour
 
 	private void Start()
 	{
-		plane = new Plane(Vector3.back, new Vector3(0, 0, zOffset)); //Create an invisable plane
+		plane = new Plane(Vector3.up, new Vector3(0, zOffset, 0)); //Create an invisable plane
 	}
 
 	private void OnMouseDrag()
@@ -30,6 +30,7 @@ public class MouseDragMovement : MonoBehaviour
 			{
 				destination = ray.GetPoint(distance); //Otherwise, go to the mouse position
 			}
+			
 			GetComponent<Rigidbody>().velocity = (destination - transform.position) * speed; // Move towards the destination
 		}
 	}
