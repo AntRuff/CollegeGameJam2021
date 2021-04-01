@@ -22,11 +22,6 @@ public class GateLock : MonoBehaviour
 		}
 	}
 
-	private void OnCollisionEnter(Collision collision)
-	{
-		
-	}
-
 	private void OnTriggerExit(Collider other)
 	{
 		if (other.gameObject.GetComponent<GateKey>().numerator == key.numerator)
@@ -34,11 +29,5 @@ public class GateLock : MonoBehaviour
 			gate.closeGate();
 		}
 	}
-
-	private void OnCollisionExit(Collision collision)
-	{
-		
-	}
-
 
 }
