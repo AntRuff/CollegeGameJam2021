@@ -6,7 +6,7 @@ public class MouseDragMovement : MonoBehaviour
 {
 	public float zOffset; //Z position to lock the plug to
 	public float speed; //How fast does it move
-
+	public CordMovement cord;
 	private Plane plane; //Plane for raycasting
 	private float distance; //Distance from raycasting
 
