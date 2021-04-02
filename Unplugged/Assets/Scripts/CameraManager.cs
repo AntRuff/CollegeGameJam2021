@@ -21,22 +21,6 @@ public class CameraManager : MonoBehaviour
 		FadeFromWhite();
 	}
 
-	private void Update()
-	{
-		if (Input.GetKeyDown(KeyCode.Alpha1))
-		{
-			FadeToWhite();
-			levelGroups[curPos].SetActive(false);
-			curPos++;
-			if (curPos >= positions.Length)
-			{
-				curPos = 0;
-			}
-			moveCamera(curPos);
-			FadeFromWhite();
-		}
-	}
-
 	private void FadeToWhite()
 	{
 		whiteScreen.canvasRenderer.SetAlpha(0.0f);
@@ -49,10 +33,14 @@ public class CameraManager : MonoBehaviour
 		whiteScreen.CrossFadeAlpha(0.0f, 3, false);
 	}
 
-	private void moveCamera(int element)
+	public void moveCamera(int element)
 	{
+		FadeToWhite();
+		levelGroups[curPos].SetActive(false);
+		curPos = element;
 		levelGroups[element].SetActive(true);
 		Camera.main.transform.position = positions[element].transform.position;
 		Camera.main.transform.rotation = positions[element].transform.rotation;
+		FadeFromWhite();
 	}
 }
