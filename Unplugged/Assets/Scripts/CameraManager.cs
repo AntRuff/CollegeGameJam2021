@@ -17,17 +17,17 @@ public class CameraManager : MonoBehaviour
 		foreach (GameObject level in levelGroups){
 			level.SetActive(false);
 		}
-		moveCamera(startPos);
 		FadeFromWhite();
 	}
 
-	private void FadeToWhite()
+	public void FadeToWhite()
 	{
 		whiteScreen.canvasRenderer.SetAlpha(0.0f);
 		whiteScreen.CrossFadeAlpha(1.0f, 3, false);
+		levelGroups[curPos].SetActive(false);
 	}
 
-	private void FadeFromWhite()
+	public void FadeFromWhite()
 	{
 		whiteScreen.canvasRenderer.SetAlpha(1.0f);
 		whiteScreen.CrossFadeAlpha(0.0f, 3, false);

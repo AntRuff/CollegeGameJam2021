@@ -6,9 +6,20 @@ public class MouseDragMovement : MonoBehaviour
 {
 	public float zOffset; //Z position to lock the plug to
 	public float speed; //How fast does it move
+	public GameObject start;
 
 	private Plane plane; //Plane for raycasting
 	private float distance; //Distance from raycasting
+
+	private void Awake()
+	{
+		transform.position = start.transform.position;
+	}
+
+	private void OnEnable()
+	{
+		transform.position = start.transform.position;
+	}
 
 	private void Start()
 	{

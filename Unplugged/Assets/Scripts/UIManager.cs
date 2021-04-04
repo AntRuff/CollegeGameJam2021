@@ -6,8 +6,6 @@ using UnityEngine.UI;
 public class UIManager : MonoBehaviour
 {
 	public Image LevelSelect;
-	
-
 	public void LevelSelected()
 	{
 		LevelSelect.canvasRenderer.SetAlpha(1.0f);
