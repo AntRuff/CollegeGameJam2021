@@ -12,7 +12,7 @@ public class MouseDragMovement : MonoBehaviour
 
 	private void Start()
 	{
-		plane = new Plane(Vector3.up, new Vector3(0, zOffset, 0)); //Create an invisable plane
+		plane = new Plane(Vector3.up, new Vector3(0, zOffset,0 )); //Create an invisable plane
 	}
 
 	private void OnMouseDrag()
@@ -21,7 +21,8 @@ public class MouseDragMovement : MonoBehaviour
 		if (plane.Raycast(ray, out distance)) // Where on the screen are we dragging to?
 		{
 			RaycastHit lineHit; // Line cast hit data
-			Vector3 destination; // Where are we going?
+			Vector3 destination; // Where are we going? 
+			
 			if (Physics.Linecast(transform.position, ray.GetPoint(distance), out lineHit)) // Is something in our way?
 			{
 				destination = lineHit.point; //If so, move to that something
@@ -29,8 +30,10 @@ public class MouseDragMovement : MonoBehaviour
 			else
 			{
 				destination = ray.GetPoint(distance); //Otherwise, go to the mouse position
-			}
+			} 
 			
+			
+
 			GetComponent<Rigidbody>().velocity = (destination - transform.position) * speed; // Move towards the destination
 		}
 	}
@@ -39,4 +42,6 @@ public class MouseDragMovement : MonoBehaviour
 	{
 		GetComponent<Rigidbody>().velocity = Vector3.zero;
 	}
+
+	
 }
