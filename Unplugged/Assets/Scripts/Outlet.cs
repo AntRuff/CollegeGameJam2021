@@ -6,10 +6,10 @@ using UnityEngine.UI;
 public class Outlet : MonoBehaviour
 {
 	public Image victory;
-
+	[SerializeField]private GameObject Plug;
 	private void OnTriggerEnter(Collider other)
 	{
-		if (other.GetComponent<MouseDragMovement>())
+		if (other == Plug.GetComponent<Collider>())
 		{
 			victory.gameObject.SetActive(true);
 		}
