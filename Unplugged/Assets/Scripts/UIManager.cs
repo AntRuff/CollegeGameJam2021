@@ -44,11 +44,6 @@ public class UIManager : MonoBehaviour
 		}
 	}
 
-	public void Pressed()
-	{
-		Debug.Log("Pressed");
-	}
-
 	private void OnEnable()
 	{
 		for(int i = 0; i < isLocked.Length; i++)

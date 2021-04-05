@@ -22,15 +22,19 @@ public class CameraManager : MonoBehaviour
 
 	public void FadeToWhite()
 	{
+		whiteScreen.gameObject.SetActive(true);
 		whiteScreen.canvasRenderer.SetAlpha(0.0f);
 		whiteScreen.CrossFadeAlpha(1.0f, 3, false);
 		levelGroups[curPos].SetActive(false);
+		
 	}
 
 	public void FadeFromWhite()
 	{
+		
 		whiteScreen.canvasRenderer.SetAlpha(1.0f);
 		whiteScreen.CrossFadeAlpha(0.0f, 3, false);
+		whiteScreen.gameObject.SetActive(false);
 	}
 
 	public void moveCamera(int element)
