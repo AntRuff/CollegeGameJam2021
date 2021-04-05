@@ -10,7 +10,12 @@ public class GateLock : MonoBehaviour
 
 	private void Start()
 	{
-		GetComponent<Renderer>().material = key.mat;
+		Invoke("SetMat", .5f);
+	}
+
+	private void SetMat()
+	{
+		GetComponent<Renderer>().material = key.GetComponent<Renderer>().material;
 		gate.GetComponent<Renderer>().material = GetComponent<Renderer>().material;
 	}
 

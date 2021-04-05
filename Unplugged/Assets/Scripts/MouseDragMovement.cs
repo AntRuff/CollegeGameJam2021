@@ -37,7 +37,7 @@ public class MouseDragMovement : MonoBehaviour
 			
 			if (Physics.Linecast(transform.position, ray.GetPoint(distance), out lineHit)) // Is something in our way?
 			{
-				destination = lineHit.point.; //If so, move to that something
+				destination = lineHit.point; //If so, move to that something
 			}
 			else
 			{
