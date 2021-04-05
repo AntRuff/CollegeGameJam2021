@@ -15,12 +15,12 @@ GameObject:
   - component: {fileID: 5472376880199258648}
   - component: {fileID: 5472376880199258628}
   m_Layer: 0
-  m_Name: Cord_Piece_2
+  m_Name: Cord_Piece
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &5472376880199258649
 Transform:
   m_ObjectHideFlags: 0
@@ -127,7 +127,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0.00091259595, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.00033687093, y: 0.00091259636, z: -0.16758722}
+  m_ConnectedAnchor: {x: 0.0001, y: 0.0009109936, z: 0.1124}
   serializedVersion: 2
   m_SwingAxis: {x: 1, y: 0, z: 0}
   m_TwistLimitSpring:

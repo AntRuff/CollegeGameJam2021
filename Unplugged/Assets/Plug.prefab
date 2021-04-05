@@ -31,7 +31,7 @@ Transform:
   m_GameObject: {fileID: 1630665752862506081}
   m_LocalRotation: {x: -0, y: -0.9999998, z: -0, w: -0.0006632069}
   m_LocalPosition: {x: -10.83, y: 0.85, z: 1.79}
-  m_LocalScale: {x: 89.84362, y: 89.84358, z: 89.84362}
+  m_LocalScale: {x: 59.48859, y: 59.48857, z: 59.48859}
   m_Children:
   - {fileID: 1630665752910960352}
   - {fileID: 1630665752599329520}
@@ -41,7 +41,7 @@ Transform:
   - {fileID: 6724015099452195837}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: -180.076, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!33 &1630665752862506087
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -234,6 +234,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   zOffset: 0.5
   speed: 4
+  start: {fileID: 0}
 --- !u!1 &1630665752910960159
 GameObject:
   m_ObjectHideFlags: 0
@@ -341,12 +342,12 @@ CharacterJoint:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1630665752910960159}
-  m_ConnectedBody: {fileID: 1630665752862506085}
+  m_ConnectedBody: {fileID: 0}
   m_ConnectedArticulationBody: {fileID: 0}
   m_Anchor: {x: 0, y: 0.0009125997, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.00016429777, y: 0.0009109966, z: 0.043965552}
+  m_ConnectedAnchor: {x: -10.809999, y: 0.9318472, z: -2.160001}
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: 1, z: 0}
   m_TwistLimitSpring:
@@ -488,7 +489,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5472376880199258626, guid: b74ee1465cb847a4389df0243ef863d0, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5472376880199258628, guid: b74ee1465cb847a4389df0243ef863d0, type: 3}
       propertyPath: m_ConnectedBody
