@@ -44,6 +44,11 @@ public class UIManager : MonoBehaviour
 		}
 	}
 
+	public void Pressed()
+	{
+		Debug.Log("Pressed");
+	}
+
 	private void OnEnable()
 	{
 		for(int i = 0; i < isLocked.Length; i++)
@@ -63,12 +68,14 @@ public class UIManager : MonoBehaviour
 	{
 		LevelSelect.canvasRenderer.SetAlpha(1.0f);
 		LevelSelect.CrossFadeAlpha(0.0f, 3, false);
+		LevelSelect.gameObject.SetActive(false);
 	}
 
 
 
 	public void ReturnToLevelSelect()
 	{
+		LevelSelect.gameObject.SetActive(true);
 		LevelSelect.canvasRenderer.SetAlpha(0.0f);
 		LevelSelect.CrossFadeAlpha(1.0f, 3, false);
 	}
