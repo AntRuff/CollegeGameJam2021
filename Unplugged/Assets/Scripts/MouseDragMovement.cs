@@ -23,6 +23,7 @@ public class MouseDragMovement : MonoBehaviour
 
 	private void Start()
 	{
+		transform.position = start.transform.position;
 		plane = new Plane(Vector3.up, new Vector3(0, zOffset,0 )); //Create an invisable plane
 	}
 
