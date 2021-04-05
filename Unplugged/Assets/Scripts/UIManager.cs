@@ -7,6 +7,7 @@ public class UIManager : MonoBehaviour
 {
 	public Image LevelSelect;
 	public CameraManager cam;
+	public GamaManager game;
 	public List<Button> level = new List<Button>();
 	public List<Sprite> levelUnlocked = new List<Sprite>();
 	public Sprite locked;
@@ -30,8 +31,9 @@ public class UIManager : MonoBehaviour
 		}
 	}
 
-	public void Unlock(int i)
+	public void Unlock()
 	{
+		int i = cam.GetCurPos();
 		isLocked[i] = false;
 	}
 

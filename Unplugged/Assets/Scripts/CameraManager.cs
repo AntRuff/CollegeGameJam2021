@@ -20,6 +20,10 @@ public class CameraManager : MonoBehaviour
 		FadeFromWhite();
 	}
 
+	public int GetCurPos()
+	{
+		return curPos;
+	}
 	public void FadeToWhite()
 	{
 		whiteScreen.gameObject.SetActive(true);
